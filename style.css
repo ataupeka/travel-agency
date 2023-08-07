@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 *{
     padding: 0;
@@ -13,14 +14,14 @@ body{
 header{
     width: 80%;
     height: 95vh;
-    border: 1px solid #000;
+   
     margin: auto;
 }
 
 header nav{
    width: 95%;
    height: 7%; 
-   border: 1px solid #000;
+ 
    margin: auto;
    display: flex;
    align-items: center;
@@ -36,24 +37,16 @@ header nav ul li{
     padding: 3px 15px;
 }
 
-header nav ul li:nth-last-child(1){
-    background: #000;
-    border-radius: 20px;
-    padding: 5px 20px;
+
+header nav .bi-three-dots{
+ display: none;   
 }
-
-
-header nav ul li:nth-last-child(1) a{
-    color: #fff;
-}
-
-
 
 
 header nav ul li a{
     text-decoration: none;
     color: #121213;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 500;
     transition: .3s linear;
 }
@@ -65,7 +58,8 @@ header .content{
     position: relative;
     width: 100%;
     height: 80%;
-    border: 1px solid #000;
+  
+   
 }
 
 header .content::before{
@@ -73,7 +67,7 @@ header .content::before{
     position: absolute;
     width: 100%;
     height: 80%;
-    border: 1px solid #000;
+  
     background: url('./images/header-image.jpg') no-repeat center center/cover;
     border-radius: 10px;
     z-index: -1;
@@ -89,12 +83,12 @@ header .content .content-box h1{
     line-height: 40px;
     font-weight: 800;
     margin: 0;
-    border: 1px solid #000;
+   
 }
 
 
 header .content .content-box p{
- font-size: 14px;
+ font-size: 16px;
  font-weight: 400;  
  color: rgb(241, 241, 241);
 
@@ -109,7 +103,7 @@ header .content .content-box button{
    color: #fff;
    outline: none;
    cursor: pointer;
-   transition: 03s linear;
+   transition: .3s linear;
 }
 
 
@@ -121,10 +115,11 @@ header .content .content-box button:hover{
 
 header .trip-box{
     position: relative;
-    width: 95%;
+    width: 100%;
     height: auto;
     margin: 0;
-    border: 1 px solid #000;
+    margin-top: -220px;
+
 
 }
 
@@ -138,22 +133,31 @@ header .trip-box .search-box{
     align-items: center;
     justify-content: center;
     background: #fff;
-    border: 5px;
-    box-shadow: 0px 10 px 25px  rgb(113, 113, 113) ;
+    border-radius: 5px;
+    box-shadow: 0px 10px 25px  rgb(113, 113, 113) ;
     z-index: 1;
+    padding: 0px 20px;
 
 }
 
 header .trip-box .search-box .card{
  width: 200px;
  height: 100%;
- border: 1px solid #000;   
+
 }
 
 header .trip-box .search-box .card h4{
     font-size: 15px;
     margin: 0;
     font-weight: 700;
+
+}
+
+header .trip-box .search-box .card h4 .bi-caret-down-fill{
+    position: absolute;
+    font-size: 13px;
+    margin: 5px 0px 0px 5px;
+    transition: .3s linear;
 
 }
 
@@ -211,7 +215,7 @@ header .trip-box .travel-box .cards{
     width: 95%;
     height: auto;
     margin: 0 auto;
-    border: 1px solid #000;
+  
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -220,7 +224,8 @@ header .trip-box .travel-box .cards{
 header .trip-box .travel-box .cards .card{
     width: 220px;
     height: 180px;
-    border: 1px solid #000;
+   
+   
 }
 
 header .trip-box .travel-box .cards .card h3{
@@ -230,27 +235,24 @@ header .trip-box .travel-box .cards .card h3{
     font-size: 16px;
     font-weight: 600;
 }
-header .trip-box .travel-box .cards .card h3 img{
-    width: 20px;
-    height: 20px;
-    margin-left: 5px;
 
-}
 header .trip-box .travel-box .cards .card img{
-    max-width: 100%;
+    width: 100%;
     height: 50%;
+    
+ 
 }
 
 header .trip-box .travel-box .cards .card .btn-city{
    display: flex; 
    align-items: center;
    justify-content: space-between ;
-   border: 1px solid #000;
+  
 }
 
 header .trip-box .travel-box .cards .card .btn-city a{
     text-decoration: none;
-    background-image: #000;
+    background: #000;
     color: #fff;
     border-radius: 20px;
     padding: 6px 20px;
@@ -260,7 +262,11 @@ header .trip-box .travel-box .cards .card .btn-city a{
 }
 
 header .trip-box .travel-box .cards .card .btn-city a:hover{
-    font-size: 11px;
+    background: gray;
+}
+
+header .trip-box .travel-box .cards .card .btn-city h5{
+    font-size: 12px;
     font-weight: 500;
     margin: 0;
     margin-top: 5px;
@@ -268,12 +274,18 @@ header .trip-box .travel-box .cards .card .btn-city a:hover{
 
 }
 
+header .trip-box .travel-box .cards .card .btn-city h5 span{
+    font-size: 13px;
+    font-weight: 700;
+}
+
 .offers{
     width: 60%;
     height: auto;
- 
     margin: auto;
+    /**/
     margin-top: 100px;
+  
 }
 .offers h1{
     font-weight: 600;
@@ -293,14 +305,14 @@ header .trip-box .travel-box .cards .card .btn-city a:hover{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
   
+    flex-wrap: wrap;
 }
 
 .offers .cards .card{
     position: relative;
     width: 200px;
-    height: 350px;
+    height: 350px;  
     margin: 10px;
   
 
@@ -337,7 +349,7 @@ header .trip-box .travel-box .cards .card .btn-city a:hover{
 
 .offers .cards .card .img_text h4{
     position: absolute;
-    font-size: 9px;
+    font-size: 11px;
     padding: 0px 15px;
     bottom: 0;
     margin: 0;
@@ -358,6 +370,8 @@ header .trip-box .travel-box .cards .card .btn-city a:hover{
     left: 0;
 }
 
+
+
 .offers .cards .card .content-box{
    
     width: 99%;
@@ -372,35 +386,24 @@ header .trip-box .travel-box .cards .card .btn-city a:hover{
   border-radius: 0px 0px 5px 5px;
 
 }
+.offers .cards .card .content-box {
+display: flex;
+flex-direction: column;
+}
 
-.offers .cards .card .content-box .price .days{
+.offers .cards .card .content-box .price{
+display: flex;
+
+}
+
+
+  
+
+.offers .cards .card .content-box .price, .days{
     margin: 0px 8px;
 
 }
-.offers .cards .card .content-box .price .icons{
-   display: flex; 
-   align-items: center;
-}
 
-
-.offers .cards .card .content-box .price .icons i:nth-child(1){
-    color: red;
-    font-size: 13px;
-    margin-right: 10px;
-}
-
-.offers .cards .card .content-box .price .icons i span{
-    color:#000;
-    font-size: 12px;
-    margin-left: 3px;
-    font-size: normal;
-}
-
-.offers .cards .card .content-box .price .icons i:nth-child(2){
-    color: rgba(112, 196, 229);
-    font-size: 13px;
-    margin-right: 10px;
-}
 
 .offers .cards .card .content-box .price .info_price{
     display: flex;
@@ -442,7 +445,6 @@ header .trip-box .travel-box .cards .card .btn-city a:hover{
 .destination{
     width: 45%;
     height: auto;
-    border: 1px solid #000;
     margin: auto;
     margin-top: 70px;
     display: flex;
@@ -451,44 +453,45 @@ header .trip-box .travel-box .cards .card .btn-city a:hover{
 
 }
 
-.destination .destination-box .destination-image{
+.destination .destination-box, .destination-image{
 
     position: relative;
     width: 50%;
     height: auto;
-    border: 1px solid #000;
+ 
 
 
 }
 
 .destination .destination-box h4{
+    margin-top:10px;
     margin: 0;
     font-size: 20px;
     color: #000;
     line-height: 10px;
     letter-spacing: 1px;
+    text-align: center;
 
 }
 
 .destination .destination-box p{
-    font-size: 12px;
+    font-size: 14px;
+    text-align: center;
+    margin-top:10px;
+   
 
 }
 
 .destination .destination-box li{
     list-style-type: none;
     padding: 0px 0px 8px 0px;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 500;
+    text-align: center;
 
 }
 
-.destination .destination-box h6{
-    width: 250px;
-    font-size: 12px;
-    font-weight: 500;
-    margin: 20px 0px;
-}
+
 .destination .destination-box button{
     font-size: 12px;
     padding: 8px 15px;
@@ -497,6 +500,9 @@ header .trip-box .travel-box .cards .card .btn-city a:hover{
     color: #fff;
     border: 2px solid #000;
     transition: .3s linear;
+   margin-left: 130px;
+
+ 
 }
 
 .destination .destination-box button:hover{
@@ -507,10 +513,292 @@ border: 2px solid gray;
 .destination .destination-image img{
    width: 100%;
    height: 420px;
-   border-radius: 5px;
+   border-radius: 7px;
 }
 
 
+footer{
+    width: 100%;
+    height: auto;
+    background: rgb(249, 249, 255);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #E3DFC8;
+}
+
+footer h2{
+text-align: center;
+margin: 0;
+margin-top: 25px;
+line-height: 30px;
+font-weight: 600;
+}
+
+footer p{
+    text-align: center;
+    width: 400px;
+    font-size: 13px;
+    margin: 10px;
+}
+
+footer .input{
+    box-shadow: 0px 3px 20px -1px gray;
+    border-radius: 20px;
+}
+
+footer .input input{
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 20px 0px 0px 20px;
+
+
+}
+
+
+footer .input button{
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    border-radius: 0px 20px 20px 0px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s linear;
+
+}
+footer .input button:hover{
+    background: gray;
+}
+
+
+footer ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+footer ul li{
+   text-align: center;
+   margin-right: 30px;
+   font-weight: bold;
+}
+
+@media screen and (max-width: 1485px){
+   .offers{
+    width: 65%;
+   } 
+}
+
+@media screen and (max-width: 1373px){
+
+}
+
+@media screen and (max-width: 1100px){
+    header{
+     width:95%;
+    }
+    header .trip-box .search-box{
+        width: 70%;
+    }
+    header .trip-box .travel-box .cards{
+    overflow: auto;
+    }
+
+    header .trip-box .travel-box .cards .card{
+        min-width: 220px;
+        margin-right: 10px;
+    }
+    .offers{
+        width: 95%;
+       }
+       .destination{
+        width: 60%;
+       } 
+
+}
+
+@media screen and (max-width: 950px){
+    
+    header .trip-box .search-box{
+        width: 85%;
+    }
+    header .trip-box .search-box .card{
+
+        margin-right: 8px;
+    }
+   
+       .destination{
+        width: 75%;
+       } 
+    .destination .destination-box button{
+       margin-left: 80px;}
+
+}
+
+@media screen and (max-width: 714px){
+
+    header nav ul{
+        
+        position: absolute;
+        width: 130px;
+        height: auto;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px gray;
+        justify-content: center;
+        top: -100%;
+        right: 30%;
+        z-index: 999999999999;
+        padding: 10px 20px;
+        transition: .8s linear;
+    }
+    header nav .ul_active{
+        top: 0;
+
+    }
+    header nav ul li{
+        padding: 8px 0px;
+        text-align: center;
+
+    }
+    header nav .bi-three-dots{
+        display: unset;
+    }
+    .header .trip-box .search_box{
+        width:93%
+    }
+    .offers{
+        width: 75%
+    }
+
+}
+
+
+@media screen and (max-width: 650px){
+    header .trip-box .search-box .card{
+        width: 140px;
+        height: 100%;
+    }
+
+    header .trip-box .search-box input[type="button"]{
+ 
+  
+    position: absolute;
+    right: 10px;
+    bottom: -43px;
+    font-size: 13px;
+
+    }
+    
+    .destination{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .destination  .destination-image{
+        width: 100%;   
+    }
+
+    .destination .destination-box h4{
+        font-size: 16px;
+    }
+    .destination .destination-box button{
+        margin-bottom: 20px;
+    }
+   
+
+
+
+
+
+}
+
+@media screen and (max-width: 541px){
+    header .content .content-box{
+        width: 85%;
+    }
+
+
+    header .content .content-box h1{
+        width: 300px;
+        font-size: 22px;
+    }
+
+    header .content .content-box p{
+        width: 300px;
+        font-size: 12px;
+    }
+
+
+    header .trip-box .search-box {
+        width: 89%;
+    }
+
+    header .trip-box .search-box .card{
+        width: 110px;
+    }
+    header .trip-box .search-box .card input{
+        width: 100%;
+
+    }
+    .offers h1{
+        font-size: 22px;
+    }
+.offers p {
+    font-size: 14px;
+
+}
+
+
+.offers .cards {
+    justify-content: center;
+}
+
+.destination .destination-box button{
+    margin-left: 5px;}
+
+footer ul li h6{
+    font-size: 8px;
+}
+
+
+
+}
+
+
+@media screen and (max-width: 411px){
+.offers {
+    margin-top: 80px;
+}
+
+
+footer p {
+    width: 330px;
+    font-weight: 12px;
+}
+
+
+footer ul li {
+   margin-right: 20px; 
+}
+}
+
+
+@media screen and (max-width: 375px){
+    .offers {
+        margin-top: 15px;
+    }
+
+}
 
 
 
